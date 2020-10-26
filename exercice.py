@@ -12,9 +12,13 @@ def exercice1(file1, file2):
                 print("et on a:")
                 print(line2)
                 break
-
+def exercice2(input_file,output_file):
+    with open(input_file, encoding="utf-8") as in_file, open(output_file, "w", encoding="utf-8") as out_file:
+        for line in in_file:
+            out_file.write(line.replace(" ", "   "))
 
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
     exercice1('./exemple.txt','./exemple2.txt')
+    exercice2('./exemple.txt','./exemple2.txt')
     pass

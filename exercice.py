@@ -7,7 +7,7 @@ def exercice1(file1, file2):
         for index, line1 in enumerate(f1):
             line2 = f2.readline()
             if line1 != line2:
-                print(f"Les fichiers sont différents! À la ligne {index}, on a:")
+                print(f"Les fichiers sont différents! À la ligne {index+1}, on a:")
                 print(line1)
                 print("et on a:")
                 print(line2)
@@ -16,5 +16,5 @@ def exercice1(file1, file2):
 
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
-
+    exercice1('./exemple.txt','./exemple2.txt')
     pass

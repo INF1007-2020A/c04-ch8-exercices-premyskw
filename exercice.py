@@ -17,6 +17,16 @@ def exercice2(input_file,output_file):
         for line in in_file:
             out_file.write(line.replace(" ", "   "))
 
+def exercice3(file_path,save_path):
+    with open(file_path, encoding='utf-8') as notes:
+        note_percent = notes.readlines()
+    with open(save_path, 'w', encoding='utf-8') as f
+    for note in note_percent:
+        for key, value in PERCENTAGE_TO_LETTER.items():
+            if value[0] <= int(note) < value[1]:
+                f.write(note + ' ' + key)
+                break
+
 if __name__ == '__main__':
     # TODO: Appelez vos fonctions ici
     exercice1('./exemple.txt','./exemple2.txt')
